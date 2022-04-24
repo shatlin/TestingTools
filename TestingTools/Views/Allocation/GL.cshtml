@@ -1,0 +1,75 @@
+﻿
+@model IEnumerable<Testing.Models.Allocation>
+
+@{
+    ViewBag.Title = "GL";
+}
+<script src="~/Content/SlickGrid-master/plugins/slick.autotooltips.js" type="text/javascript"></script>
+
+
+<div class="PageHeader">
+    Allocation
+</div>
+
+<form action="#" method="post">
+
+    <table class="Layout" id="tblAllocation" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="pagecontent">
+                <div class="PlaceHolder" id="GridDiv">
+                    <table class="tableLayout">
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                                <div id="grdAllocation" class="GridContainer" style="height: 100%;">
+
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <br />
+                                <input type="button" class="inputButton" value="Pass" id="pass"
+                                       onclick="PassGL()" />
+                                <a id="viewdetailsLink" href="~/Allocation/Edit"
+                                   onclick="PassGL()"></a>
+                                <input type="button" class="inputButton" value="Fail" id="fail"
+                                       onclick="FailGL()" />
+                                <a id="viewdetailsLink" href="~/Allocation/Edit"
+                                   onclick="FailGL()"></a>
+                                <input type="button" class="inputButton" value="Set as N/A" id="na"
+                                       onclick="NAGL()" />
+                                <a id="viewdetailsLink" href="~/Allocation/Edit"
+                                   onclick="NAGL()"></a>
+                                <input type="button" class="inputButton" value="Query Tester" id="querytester"
+                                       onclick="QueryTesterGL()" />
+                                <a id="viewdetailsLink" href="~/Allocation/Edit"
+                                   onclick="QueryTesterGL()"></a>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+</form>
+
+
+<div id="AllocationDetailsdialog"
+     style="overflow: hidden;"></div>
+
+
+
+<script type="text/javascript">
+    var AllocationUrl = '@Url.Action("GetGL", "Allocation")';
+    var UpdateGL = '@Url.Action("UpdateGL", "Allocation")';
+</script>
+
+
+<script src="~/Content/Scripts/Allocation/GL.js"
+        type="text/javascript"></script>

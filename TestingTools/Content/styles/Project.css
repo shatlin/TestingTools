@@ -1,0 +1,1378 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font: normal 12px/12px "calibri",arial,sans-serif;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    background-color: #FFFFFF;
+}
+
+.placeholder {
+    color: #aaa;
+}
+
+a {
+    background: none;
+    color: #fff;
+    outline: none;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-decoration: underline;
+}
+
+    a:link, a:visited, a:active, a:hover {
+        color: blue;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #FF0000;
+    }
+
+header, footer, hgroup, nav, section {
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.50em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+    h5 a:link, h5 a:visited, h5 a:active {
+        padding: 0;
+        text-decoration: none;
+    }
+
+strong {
+    color: #ff0000;
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.title {
+    font: normal 25px "calibri",arial,sans-serif;
+}
+
+div.edit-set-cbox {
+    width: 440px;
+    padding: 6px 10px 14px 10px;
+    background-color: #BADABF;
+    margin: 5px 5px 5px 5px;
+    border: 3px double #8F8F8F;
+}
+
+div.nonAjax {
+    display: block;
+    margin: 5px 0 5px 30px;
+}
+
+.button-cbox:hover {
+    background-color: white;
+    color: #006EFF;
+    font-weight: bold;
+}
+/* main layout
+----------------------------------------------------------*/
+/* remove height from LayoutHeader to adjust menu for on server--*/
+.LayoutHeader {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ContentFormHolder {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+}
+
+    .ContentFormHolder td.pagecontent {
+        vertical-align: top;
+        valign: text-top;
+        padding-top: 10px;
+    }
+
+    .ContentFormHolder table {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+    }
+
+    .ContentFormHolder td.Login {
+        width: 100%;
+        text-align: center;
+        vertical-align: middle;
+        padding: 0px;
+        border-collapse: separate;
+    }
+
+    .ContentFormHolder .LoginForm {
+        margin: auto;
+        text-align: left;
+        width: 273px;
+        height: 190px; /*205px;*/
+        padding: 12px;
+        background-color: #FFFFFF;
+        border: 1px solid #DDD;
+        border-collapse: collapse;
+        -moz-border-radius: 7px;
+        -khtml-border-radius: 7px;
+        -webkit-border-radius: 7px;
+        border-radius: 7px;
+        box-shadow: 5px 5px 5px #333;
+    }
+
+    .ContentFormHolder .LoginFormErrorLogger {
+        margin: auto;
+        text-align: center;
+        width: 300px;
+        height: 20px;
+        margin-top: 20px;
+        padding: 10px 0px 0px 5px;
+        background-color: #ccc;
+        color: #E05B56;
+        border-collapse: collapse;
+        -moz-border-radius: 7px;
+        -khtml-border-radius: 7px;
+        -webkit-border-radius: 7px;
+        border-radius: 7px;
+    }
+
+        .ContentFormHolder .LoginFormErrorLogger .validation-summary-errors {
+            padding: 0px;
+            margin: 0px;
+        }
+
+    .ContentFormHolder .LoginForm a, a:hover {
+        color: #E05B56;
+    }
+
+    .ContentFormHolder .ManageAccount {
+        margin: auto;
+        text-align: left;
+        width: 280px;
+        height: 260px;
+        padding: 25px;
+        background-color: #FFFFFF;
+        border: 1px solid #DDD;
+        border-collapse: collapse;
+        -moz-border-radius: 7px;
+        -khtml-border-radius: 7px;
+        -webkit-border-radius: 7px;
+        border-radius: 7px;
+    }
+
+        .ContentFormHolder .ManageAccount a, a:hover {
+            color: #E05B56;
+        }
+
+    .ContentFormHolder .RegistrationForm {
+        margin: auto;
+        text-align: left;
+        width: 270px;
+        height: 260px;
+        padding: 25px;
+        background-color: #FFFFFF;
+        border: 1px solid #DDD;
+        border-collapse: collapse;
+        -moz-border-radius: 7px;
+        -khtml-border-radius: 7px;
+        -webkit-border-radius: 7px;
+        border-radius: 7px;
+    }
+
+    .ContentFormHolder td.main-content {
+        width: 70%;
+        text-align: left;
+        vertical-align: top;
+        valign: top;
+        padding: 20px;
+        height: 100%;
+    }
+
+    .ContentFormHolder .main-menu {
+        width: 30%;
+        text-align: left;
+        vertical-align: top;
+        valign: top;
+        padding: 10px;
+        height: 100%;
+    }
+
+    .ContentFormHolder .main-form {
+        width: 100%;
+        text-align: left;
+        vertical-align: top;
+        valign: top;
+        padding: 10px;
+    }
+
+    .ContentFormHolder .menu {
+        font: 12px;
+        height: 310px;
+        margin-top: 0px;
+        background-color: #FFFFFF;
+        border: 1px solid #DDD;
+        padding: 0px;
+        border-collapse: collapse;
+        -moz-border-radius: 0px 0px 7px 7px;
+        -khtml-border-radius: 0px 0px 7px 7px;
+        -webkit-border-radius: 0px 0px 7px 7px;
+        border-radius: 0px 0px 7px 7px;
+    }
+
+    .ContentFormHolder .menuheader {
+        background-color: Black;
+        color: #FFF;
+        border: 0px solid rgb(0,0,0);
+        padding: 8px 0px 0px 15px; /*margin: 0px;*/
+        border-collapse: collapse;
+        height: 25px;
+        -moz-border-radius: 7px 7px 0px 0px;
+        -khtml-border-radius: 7px 7px 0px 0px;
+        -webkit-border-radius: 7px 7px 0px 0px;
+        border-radius: 7px 7px 0px 0px;
+    }
+
+    .ContentFormHolder .menucontent {
+        margin: 25px 0px 25px 30px;
+        font-size: 12px;
+    }
+
+        .ContentFormHolder .menucontent li {
+            margin: 0px 0px 10px 0px;
+            color: rgb(0,0,0);
+        }
+
+        .ContentFormHolder .menucontent span {
+            margin: 0px 0px 10px 0px;
+            color: #006CD9;
+        }
+
+        .ContentFormHolder .menucontent p.ErrorMessageHeader {
+            font: normal 14px "calibri",arial,sans-serif;
+        }
+
+        .ContentFormHolder .menucontent p.ErrorMessage {
+            color: Red;
+            text-align: left;
+            padding-right: 35px;
+        }
+
+    .ContentFormHolder .alignCenter p.ErrorHeader {
+        font: normal 22px "calibri",arial,sans-serif;
+    }
+
+.Header {
+    clear: both;
+    vertical-align: middle;
+    height: 20px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #C0C0C0;
+}
+
+    .Header table {
+        width: 100%;
+    }
+
+    .Header td.Logo {
+        width: 5%;
+        padding-left: 3px;
+        padding-right: 5px;
+        vertical-align: bottom;
+    }
+
+    .Header td.Cred {
+        width: 5%;
+        padding-right: 10px;
+        text-align: right;
+    }
+
+        .Header td.Cred a {
+            color: #fff;
+        }
+
+            .Header td.Cred a:hover {
+                color: #E05B56;
+            }
+
+        .Header td.Cred ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .Header td.Cred li {
+            display: inline;
+            list-style: none;
+        }
+
+    .Header td.SiteMap {
+        text-align: left;
+        margin: 0px;
+        padding: 0px;
+        width: 90%;
+    }
+
+    .Header ul#menu {
+        margin: 0 0 5px;
+        padding: 0;
+        font: 12px calibri,arial,BPreplayRegular,Helvetica;
+    }
+
+        .Header ul#menu li {
+            display: inline;
+            list-style: none;
+            padding-left: 15px;
+        }
+
+            .Header ul#menu li a {
+                background: none;
+                color: #fff;
+                text-decoration: none;
+            }
+
+                .Header ul#menu li a:hover {
+                    color: #E05B56;
+                    text-decoration: none;
+                }
+
+#content {
+    overflow: hidden;
+    padding: 0 0 15px 10px;
+    float: left;
+}
+
+.body {
+    clear: both;
+    vertical-align: top;
+    height: 100%;
+    vertical-align: top;
+    background-color: rgb(234, 234, 234);
+    overflow: auto;
+}
+
+.body-content {
+    vertical-align: top;
+    valign: text-top;
+}
+
+.Loginbody-content {
+    vertical-align: middle;
+    valign: text-middle;
+}
+
+.bodycontentSides {
+    width: 10%;
+}
+
+.footer {
+    clear: both;
+    height: 10px;
+    vertical-align: bottom;
+    background-color: white; /*xrgb(248, 248, 248);*/
+}
+
+.footerbody {
+    height: 20px;
+    border-top: 1px dotted grey;
+    background-color: #FFFFFF; /*background-color: #ccc; */ /*#F5F5F5;*/
+    padding: 2px 0px;
+}
+
+.textAlignRight {
+    text-align: right;
+}
+
+.VerticalAlignMiddle {
+    vertical-align: middle;
+}
+
+.float-left {
+    float: left;
+    margin-left: 20px;
+}
+
+.float-right {
+    float: right;
+    margin-right: 20px;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+.alignleft {
+    text-align: left;
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+.LoginbtnalignRight {
+    text-align: right;
+    padding-right: 25px;
+}
+
+/* site title
+----------------------------------------------------------*/
+.site-title a, .site-title a:hover, .site-title a:active {
+    background: none;
+    color: #fff; /*font-weight: 800;     font-size: 1.5em;*/
+    outline: none;
+    text-decoration: none;
+    font: normal 18px "calibri",arial,sans-serif;
+}
+
+/* menu
+----------------------------------------------------------*/
+ul#menu {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 0 0 5px;
+    padding: 0;
+}
+
+    ul#menu li {
+        display: inline;
+        list-style: none;
+        padding-left: 15px;
+    }
+
+        ul#menu li a {
+            background: none;
+            color: #999;
+            text-decoration: none;
+        }
+
+            ul#menu li a:hover {
+                color: #333;
+                text-decoration: none;
+            }
+/* forms 
+----------------------------------------------------------*/
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+    fieldset legend {
+        display: none;
+    }
+
+    fieldset ol {
+        padding: 0;
+        list-style: none;
+    }
+
+        fieldset ol li {
+            padding-bottom: 5px;
+        }
+
+#socialLoginForm {
+    margin-left: 0px;
+    float: left;
+    width: 40%;
+}
+
+    #socialLoginForm h2 {
+        margin-bottom: 5px;
+    }
+
+#socialLoginList button {
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+}
+
+    label.checkbox {
+        display: inline;
+        font-weight: normal;
+        font-size: 14px;
+    }
+
+
+select {
+ border-top: 1px solid #22513c;
+    border-left: 1px solid #22513c;
+    border-right: 1px solid #22513c;
+    border-bottom: 1px solid #22513c;
+    background: #fff;
+    color: #333;
+    font-size: 1.0em;
+    margin: 2px 0 2px 0;
+    padding: 2px;
+    width: 250px;
+    height: 25px;
+    vertical-align: text-top;
+    text-transform: capitalize;
+   
+}
+
+input {
+    
+    height: 25px;
+    width: 250px;
+    background-color: #fff;
+    border-top: 1px solid #22513c;
+    border-left: 1px solid #22513c;
+    border-right: 1px solid #22513c;
+    border-bottom: 1px solid #22513c;
+}
+
+.inputTextArea {
+    width: 240px !important;
+    height: 100px;
+    background-color: #fff;
+    border-top: 1px solid #22513c;
+    border-left: 1px solid #22513c;
+    border-right: 1px solid #22513c;
+    border-bottom: 1px solid #22513c;
+}
+
+
+    input:focus,select:focus textarea:focus {
+        outline: none;
+        border: 1px solid #7bc1f7;
+      
+    }
+
+select:focus {
+    outline: none;
+    border: 1px solid #7bc1f7;
+   
+}
+
+input[type="checkbox"] {
+    background: transparent;
+    border: inherit;
+    width: auto;
+}
+
+
+td input[type="submit"].btnLarge {
+    width: 150px;
+}
+
+/* info and errors */
+.message-info {
+    border: 1px solid;
+    clear: both;
+    padding: 10px;
+    margin: 0px;
+}
+
+.message-error {
+    clear: both;
+    color: #E05B56;
+    font-size: 1.1em;
+    font-weight: normal;
+}
+
+.message-success {
+    color: #7ac0da;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 10px;
+    font-weight: normal;
+}
+
+.error {
+    color: #e80c4d;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #E05B56;
+    font-weight: normal;
+    display: list-item;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #e80c4d;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.modalDlg a {
+    color: Blue;
+}
+/*Controls
+.....................................*/
+
+.ContentFormHolder .control_menu {
+    font: 12px BPreplayRegular,Helvetica,calibri;
+    height: 310px;
+    margin-top: 0px;
+    background-color: #FFFFFF;
+    border: 1px solid #DDD;
+    padding: 0px;
+    border-collapse: collapse;
+    -moz-border-radius: 0px 0px 7px 7px;
+    -khtml-border-radius: 0px 0px 7px 7px;
+    -webkit-border-radius: 0px 0px 7px 7px;
+    border-radius: 0px 0px 7px 7px;
+}
+
+.ContentFormHolder .control_menu_layout {
+    width: 100%;
+    padding: 10px;
+}
+
+    .ContentFormHolder .control_menu_layout td {
+        width: 50%;
+        height: 120px;
+        vertical-align: top;
+        padding: 10px;
+    }
+
+        .ContentFormHolder .control_menu_layout td .Controls {
+            width: 95%;
+            display: block;
+            height: 25px;
+            padding-left: 10px;
+            padding-top: 20px;
+            margin: 0px;
+            vertical-align: bottom;
+            valign: bottom;
+        }
+
+        .ContentFormHolder .control_menu_layout td .Submit {
+            width: 87%;
+            display: block;
+            height: 25px;
+            padding: 12px;
+            margin: 0px;
+            text-align: right;
+        }
+
+.add-on {
+    display: inline-block;
+    width: auto;
+    height: 19px;
+    min-width: 90px;
+    padding: 5px;
+    font-weight: normal;
+    line-height: 18px;
+    text-align: center;
+    text-shadow: 0 1px 0 #ffffff;
+    vertical-align: middle;
+    background-color: #eeeeee;
+    border: 1px solid #ccc;
+    /* -moz-border-radius: 4px 0px 0px 4px;
+    -khtml-border-radius: 4px 0px 0px 4px;
+    -webkit-border-radius: 4px 0px 0px 4px;
+    border-radius: 4px 0px 0px 4px;*/
+}
+
+.ContentFormHolder .control_menu_layout td .Controls input {
+    display: inline-block;
+    color: #333;
+    width: 200px;
+    height: 19px;
+    min-width: 90px;
+    padding: 5px;
+    font-weight: normal;
+    line-height: 18px;
+    text-align: center;
+    text-shadow: 0 1px 0 #ffffff;
+    vertical-align: middle;
+    -moz-border-radius: 0px;
+    -khtml-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    /* -moz-border-radius: 0px 4px 4px 0px;
+    -khtml-border-radius: 0px 4px 4px 0px;
+    -webkit-border-radius: 0px 4px 4px 0px;
+    border-radius: 0px 4px 4px 0px;*/
+}
+
+.ContentFormHolder .control_menu_layout td .Controls select {
+    border: 1px solid #e2e2e2;
+    background: #fff;
+    color: #333;
+    font-size: 1.0em;
+    margin: 5px 0 6px 0;
+    padding: 5px;
+    width: 210px;
+    height: 30px;
+    line-height: 30px;
+    -moz-border-radius: 0px 4px 4px 0px;
+    -khtml-border-radius: 0px 4px 4px 0px;
+    -webkit-border-radius: 0px 4px 4px 0px;
+    border-radius: 0px 4px 4px 0px;
+}
+
+
+
+.ContentFormHolder .Grid {
+    font: 12px BPreplayRegular,Helvetica,calibri;
+    height: 200px;
+    margin-top: 0px;
+    background-color: #FFFFFF;
+    padding: 0px;
+    border: 0px;
+    border-collapse: collapse;
+    /* -moz-border-radius: 7px;
+    -khtml-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;*/
+}
+
+.table-striped {
+    width: 100%;
+    border: 0px;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    border: 1px solid #DDD;
+}
+
+    .table-striped thead tr {
+        border-top: 0px;
+        height: 45px;
+        background: #000000;
+        color: White;
+    }
+    /*.table-striped tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th {
+background-color: #F9F9F9;
+}*/
+    .table-striped th, .table-striped td {
+        padding: 8px;
+        line-height: 18px;
+        text-align: left;
+        vertical-align: top;
+        border-top: 1px solid #DDD;
+        display: table-cell;
+    }
+
+    .table-striped tbody tr:hover {
+        background: whiteSmoke;
+    }
+
+    .table-striped tbody .label {
+        padding: 3px 7px 3px 7px;
+        border-collapse: collapse;
+        -moz-border-radius: 7px;
+        -khtml-border-radius: 7px;
+        -webkit-border-radius: 7px;
+        border-radius: 7px;
+    }
+
+    .table-striped tbody .labelinfo1 {
+        background-color: #3A87AD;
+    }
+
+    .table-striped tbody .labelinfo2 {
+        background-color: #999;
+    }
+
+    .table-striped tbody .labelinfo3 {
+        background-color: #468847;
+    }
+
+[class^="icon-"],
+[class*=" icon-"] {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    *margin-right: .3em;
+    line-height: 14px;
+    vertical-align: text-top;
+    background: url("../Images/glyphicons-halflings.png");
+    background-position: 14px 14px;
+    background-repeat: no-repeat;
+}
+
+    [class^="icon-"]:last-child,
+    [class*=" icon-"]:last-child {
+        *margin-left: 0;
+    }
+
+.icon-white {
+    background: url("../Images/glyphicons-halflings-white.png");
+}
+
+.icon-duplicate {
+    background-position: 0 0;
+}
+
+.icon-trash {
+    background-position: -456px 0;
+}
+
+.icon-lock {
+    background-position: -287px -24px;
+}
+
+/*......... RoleBasedMenu........ */
+#RoleBasedMenu {
+    text-align: center;
+    margin: 0;
+    padding: 3px 0 0 0;
+    list-style: none;
+    width: auto;
+}
+
+    #RoleBasedMenu li {
+        float: left;
+        padding: 0 20px 10px 0;
+        position: relative;
+        line-height: 0;
+        width: auto;
+    }
+
+/*......... WebFormGrid........ */
+
+.AppForm {
+    width: 100%;
+    border: 0px;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    border: 1px solid #DDD;
+}
+
+    .AppForm td.table-FormHeader {
+        font: normal 16px/14px "calibri",arial,sans-serif;
+        border-top: 0px;
+        padding: 10px;
+        line-height: 18px;
+        text-align: left;
+        height: 20px;
+        background: #000000;
+        color: White;
+    }
+
+    .AppForm td {
+        padding: 8px;
+        line-height: 18px;
+        text-align: left;
+        vertical-align: top;
+        border-top: 1px solid #DDD;
+        display: table-cell;
+        width: 25%;
+    }
+
+        .AppForm td.ColumnTitle {
+            background-color: #FFFFFF;
+        }
+
+        .AppForm td.ColumnButton {
+            background-color: #FFFFFF;
+            text-align: right;
+        }
+
+.AppForms .label {
+    padding: 3px 7px 3px 7px;
+    border-collapse: collapse;
+    -moz-border-radius: 7px;
+    -khtml-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+}
+
+
+.ContentFormHolder .Grid input, textarea {
+    margin: 0px;
+    padding: 5px;
+    width: 250px;
+    height: 15px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #E2E2E2;
+}
+
+.ContentFormHolder .Grid select {
+    border: 1px solid #E2E2E2;
+    background: white;
+    color: #333;
+    font-size: 1.0em;
+    margin: 0px;
+    padding: 5px;
+    width: 265px;
+    height: 27px;
+    line-height: 30px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.ContentFormHolder .Grid .alignleft a {
+    display: block;
+    font-size: 1em;
+    padding: 6px 15px 4px 15px;
+    border: 1px solid lightGrey;
+    font: 13px calibri,BPreplayRegular,Helvetica,arial;
+    font-weight: normal;
+    background: #262626;
+    color: white;
+    margin: 0px;
+    height: 21px;
+    width: 90px;
+    text-align: center;
+    -moz-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.AppForm table.imageTable td {
+    border: 0px;
+}
+
+    .AppForm table.imageTable td.textColumn {
+    }
+
+    .AppForm table.imageTable td.imgColumn {
+        text-align: right;
+    }
+
+/*....DealMemoMaintenance Layout .....*/
+
+.Layout {
+    width: 100%;
+    height: 100%;
+}
+
+.tableLayout {
+    width: 100%;
+    font-size: 12px;
+    border-color: Green;
+}
+
+.Layout td.pagecontent {
+    vertical-align: top;
+    padding-top: 0px;
+}
+
+.tableLayout td {
+    padding: 0px 0px 0px 0px;
+}
+
+    .tableLayout td.ColumnImg {
+        text-align: center;
+    }
+
+.maxwidth {
+    width: 100%;
+}
+
+.LayoutBorder {
+    border: 1px solid #676767;
+}
+
+ .PlaceHolder
+ {
+font-size:12px;
+font-family: Tahoma,Arial;
+border: 1px solid gray;
+margin: 2px 10px 4px 10px;
+padding:0px 0px 0px 0px;
+background: rgba(255,255,255,1);
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 );
+
+ }
+.reallyHidden
+{ display: none !important;}
+
+.ReportPlaceHolder {
+    border: 1px solid #000;
+    margin: 2px auto 10px auto;
+    padding: 2px;
+    width: 50%;
+    background: -moz-linear-gradient(top, #FFFFFF 30%, #FFFFFF 37%, #FFFFFF 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,#FFFFFF), color-stop(37%,#FFFFFF), color-stop(100%,#FFFFFF)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #FFFFFF 30%,#FFFFFF 37%,#FFFFFF 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #FFFFFF 30%,#FFFFFF 37%,#FFFFFF 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #FFFFFF 30%,#FFFFFF 37%,#FFFFFF 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #FFFFFF 30%,#FFFFFF 37%,#FFFFFF 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#FFFFFF',GradientType=0 ); /* IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#FFFFFF'); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#FFFFFF')"; /* IE8+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFFFFF', EndColorStr='#FFFFFF');
+    -moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari, Chrome */
+    -khtml-border-radius: 5px; /* KHTML */
+    border-radius: 8px; /* CSS3 */
+}
+
+
+
+.DaybyDayReportPlaceHolder {
+    border: 1px solid #000;
+    margin: 2px auto 10px auto;
+    padding: 2px;
+    width: 45%;
+    background: -moz-linear-gradient(top, #FFFFFF 30%, #FFFFFF 37%, #FFFFFF 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,#FFFFFF), color-stop(37%,#FFFFFF), color-stop(100%,#FFFFFF)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #FFFFFF 30%,#FFFFFF 37%,#FFFFFF 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #FFFFFF 30%,#FFFFFF 37%,#FFFFFF 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #FFFFFF 30%,#FFFFFF 37%,#FFFFFF 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #FFFFFF 30%,#FFFFFF 37%,#FFFFFF 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#FFFFFF',GradientType=0 ); /* IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#FFFFFF'); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#FFFFFF')"; /* IE8+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFFFFF', EndColorStr='#FFFFFF');
+    -moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari, Chrome */
+    -khtml-border-radius: 5px; /* KHTML */
+    border-radius: 8px; /* CSS3 */
+}
+
+
+
+.divTabContainer {
+    border: 1px solid #676767;
+    margin: 2px 7px 1px 7px;
+}
+
+.Margin {
+    margin: 1px 6px 1px 6px;
+}
+
+.mainHeading {
+    font: normal 16px "calibri",arial,sans-serif;
+    font-weight: bold;
+    padding: 4px 35px;
+}
+
+.subHeading {
+    font: normal 14px "calibri",arial,sans-serif;
+    font-weight: bold;
+    padding: 3px 4px 3px 4px;
+}
+
+.ReportMainHeading {
+    font: normal 17px "calibri",arial,sans-serif;
+    font-weight: bold;
+    padding: 0px 5px;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.inputButton {
+    border: 1px solid #ccc;
+    background-color: #22513c;
+    color: white;
+     font: normal 12px "calibri",arial,sans-serif;
+     font-weight:bold;
+    padding: 3px 10px;
+    margin: 8px auto;
+    width: auto;
+    cursor: pointer;
+}
+
+    /*.inputButton:hover {
+        border: 1px solid #bbb;
+        background: #ccc url(images/button_hover_bg.gif) repeat-x left center;
+    }*/
+
+.inputButtonDisable {
+    border: 1px solid #C7C7C7;
+    background-color: #E0E0E0;
+    color: #C8C8C8;
+    padding: 5px 10px;
+    margin: 4px auto;
+    width: auto;
+}
+
+    .inputButtonDisable:hover {
+        border: 1px solid #C7C7C7;
+    }
+
+
+
+
+.tabdiv {
+    margin: 1px;
+}
+
+.tabDiv1 {
+    margin: 15px;
+    border: 0;
+}
+
+.inputText {
+    width: 150px;
+    height: 21px;
+    -moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari, Chrome */
+    -khtml-border-radius: 5px; /* KHTML */
+    border-radius: 5px; /* CSS3 */
+    background-color: #fff;
+    margin: 2px 5px 2px 0px;
+    padding: 0 2px;
+    font-size: 11px;
+    text-transform: uppercase;
+    border-top: 1px solid gray;
+    border-left: 1px solid #7bc1f7;
+    border-right: 1px solid #7bc1f7;
+    border-bottom: 1px solid #7bc1f7;
+}
+
+
+
+.inputTextSamll {
+    width: 150px;
+    height: 21px;
+    background-color: #fff;
+    margin: 2px 2px 2px 0px;
+    padding: 0 1px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border-top: 1px solid gray;
+    border-left: 1px solid #7bc1f7;
+    border-right: 1px solid #7bc1f7;
+    border-bottom: 1px solid #7bc1f7;
+}
+
+
+
+.inputTextSmall {
+    width: 150px;
+    height: 21px;
+    background-color: #fff;
+    margin: 2px 2px 2px 0px;
+    padding: 0 1px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border-top: 1px solid gray;
+    border-left: 1px solid #7bc1f7;
+    border-right: 1px solid #7bc1f7;
+    border-bottom: 1px solid #7bc1f7;
+}
+
+.inputTextSmaller {
+    width: 95px;
+    height: 21px;
+    -moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari, Chrome */
+    -khtml-border-radius: 5px; /* KHTML */
+    border-radius: 5px; /* CSS3 */
+    background-color: #fff;
+    margin: 2px 5px 2px 0px;
+    padding: 0 2px;
+    font-size: 11px;
+    text-transform: uppercase;
+    border-top: 1px solid gray;
+    border-left: 1px solid #7bc1f7;
+    border-right: 1px solid #7bc1f7;
+    border-bottom: 1px solid #7bc1f7;
+}
+
+.inputTextSingleChar {
+    width: 40px;
+    height: 21px;
+    -moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari, Chrome */
+    -khtml-border-radius: 5px; /* KHTML */
+    border-radius: 5px; /* CSS3 */
+    background-color: #fff;
+    margin: 2px 5px 2px 0px;
+    padding: 0 2px;
+    font-size: 11px;
+    text-transform: uppercase;
+    border-top: 1px solid gray;
+    border-left: 1px solid #7bc1f7;
+    border-right: 1px solid #7bc1f7;
+    border-bottom: 1px solid #7bc1f7;
+}
+
+.inputTextLarge {
+    width: 210px;
+    /*border:1px solid #ccc;*/
+    border-top: 1px solid gray;
+    border-left: 1px solid #7bc1f7;
+    border-right: 1px solid #7bc1f7;
+    border-bottom: 1px solid #7bc1f7;
+    height: 21px;
+    -moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari, Chrome */
+    -khtml-border-radius: 5px; /* KHTML */
+    border-radius: 5px; /* CSS3 */
+    background-color: #fff;
+    margin: 2px 5px 2px 0px;
+    padding: 0 5px;
+}
+
+
+.inputTextCol {
+    border-top: 1px solid gray;
+    border-left: 1px solid #7bc1f7;
+    border-right: 1px solid #7bc1f7;
+    border-bottom: 1px solid #7bc1f7;
+    width: 50px;
+    height: 21px;
+    -moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari, Chrome */
+    -khtml-border-radius: 5px; /* KHTML */
+    border-radius: 5px; /* CSS3 */
+    background-color: #fff;
+    padding: 0 5px;
+    text-transform: uppercase;
+}
+
+.inputText1Col {
+    border-top: 1px solid gray;
+    border-left: 1px solid #7bc1f7;
+    border-right: 1px solid #7bc1f7;
+    border-bottom: 1px solid #7bc1f7;
+    width: 100px;
+    height: 21px;
+    -moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari, Chrome */
+    -khtml-border-radius: 5px; /* KHTML */
+    border-radius: 5px; /* CSS3 */
+    background-color: #fff;
+    padding: 0 5px;
+    text-transform: uppercase;
+}
+
+.inputText4col {
+    width: 640px;
+    border-top: 1px solid gray;
+    border-left: 1px solid #7bc1f7;
+    border-right: 1px solid #7bc1f7;
+    border-bottom: 1px solid #7bc1f7;
+    height: 21px;
+    -moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari, Chrome */
+    -khtml-border-radius: 5px; /* KHTML */
+    border-radius: 5px; /* CSS3 */
+    background-color: #fff;
+    margin: 2px 5px 2px 0px;
+    padding: 0 5px;
+    text-transform: uppercase;
+}
+
+.inputText3col {
+    width: 98%;
+    border-top: 1px solid gray;
+    border-left: 1px solid #7bc1f7;
+    border-right: 1px solid #7bc1f7;
+    border-bottom: 1px solid #7bc1f7;
+    height: 20px;
+    -moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari, Chrome */
+    -khtml-border-radius: 5px; /* KHTML */
+    border-radius: 5px; /* CSS3 */
+    background-color: #fff;
+    margin: 2px 5px 2px 0px;
+    padding: 0 5px;
+    text-transform: uppercase;
+}
+
+.inputText3ColMedium {
+    width: 96%;
+    border-top: 1px solid gray;
+    border-left: 1px solid #7bc1f7;
+    border-right: 1px solid #7bc1f7;
+    border-bottom: 1px solid #7bc1f7;
+    height: 20px;
+    -moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari, Chrome */
+    -khtml-border-radius: 5px; /* KHTML */
+    border-radius: 5px; /* CSS3 */
+    background-color: #fff;
+    margin: 2px 5px 2px 0px;
+    padding: 0 5px;
+    text-transform: uppercase;
+}
+
+.inputText2col {
+    width: 300px;
+    border-top: 1px solid gray;
+    border-left: 1px solid #7bc1f7;
+    border-right: 1px solid #7bc1f7;
+    border-bottom: 1px solid #7bc1f7;
+    height: 20px;
+    -moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari, Chrome */
+    -khtml-border-radius: 5px; /* KHTML */
+    border-radius: 5px; /* CSS3 */
+    background-color: #fff;
+    margin: 2px 5px 2px 0px;
+    padding: 0 5px;
+    text-transform: uppercase;
+}
+
+
+.asterisk {
+    color: #b11;
+    font-size: 1.2em;
+}
+
+
+.GridContainer {
+    background-color: white;
+    border: 1px solid silver;
+    font-family: calibri,arial;
+    font-size: 12px;
+}
+
+.RequiredIndicator {
+    font-family: calibri,arial;
+    font-size: 14px;
+    text-align: right;
+    color: Red;
+}

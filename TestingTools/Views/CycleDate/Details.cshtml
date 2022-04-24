@@ -1,0 +1,36 @@
+﻿@model Testing.Models.CycleDate
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CycleDate</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Cycle.CycleName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Cycle.CycleName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateInCycle)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateInCycle)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DayName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DayName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

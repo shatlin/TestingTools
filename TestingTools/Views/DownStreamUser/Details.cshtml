@@ -1,0 +1,29 @@
+﻿@model Testing.Models.DownStreamUser
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>DownStreamUser</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DownStream.DownStreamName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DownStream.DownStreamName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.User.UserId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.User.UserId)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

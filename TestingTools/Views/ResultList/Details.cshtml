@@ -1,0 +1,29 @@
+﻿@model Testing.Models.ResultList
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>ResultList</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ResultName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ResultName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ResultDescription)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ResultDescription)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

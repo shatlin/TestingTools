@@ -1,0 +1,36 @@
+﻿@model Testing.Models.Cycle
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Cycle</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Project.ProjectName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Project.ProjectName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CycleName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CycleName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Active)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Active)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

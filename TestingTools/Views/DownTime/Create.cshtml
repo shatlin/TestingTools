@@ -1,0 +1,68 @@
+﻿@model Testing.Models.DownTime
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>DownTime</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SystemId, "System")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("SystemId", String.Empty)
+            @Html.ValidationMessageFor(model => model.SystemId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CycleId, "Cycle")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("CycleId", String.Empty)
+            @Html.ValidationMessageFor(model => model.CycleId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StartDateTime)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StartDateTime)
+            @Html.ValidationMessageFor(model => model.StartDateTime)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EndDateTime)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EndDateTime)
+            @Html.ValidationMessageFor(model => model.EndDateTime)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Description)
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

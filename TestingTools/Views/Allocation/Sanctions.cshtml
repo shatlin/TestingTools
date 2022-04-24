@@ -1,0 +1,75 @@
+﻿
+@model IEnumerable<Testing.Models.Allocation>
+
+@{
+    ViewBag.Title = "Sanctions";
+}
+<script src="~/Content/SlickGrid-master/plugins/slick.autotooltips.js" type="text/javascript"></script>
+
+
+<div class="PageHeader">
+    Sanctions Verification
+</div>
+
+<form action="#" method="post">
+
+    <table class="Layout" id="tblAllocation" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="pagecontent">
+                <div class="PlaceHolder" id="GridDiv">
+                    <table class="tableLayout">
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                                <div id="grdAllocation" class="GridContainer" style="height: 100%;">
+
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <br />
+                                <input type="button" class="inputButton" value="Pass" id="pass"
+                                       onclick="PassSanctions()" />
+                                <a id="viewdetailsLink" href="~/Allocation/Edit"
+                                   onclick="PassSanctions()"></a>
+                                <input type="button" class="inputButton" value="Fail" id="fail"
+                                       onclick="FailSanctions()" />
+                                <a id="viewdetailsLink" href="~/Allocation/Edit"
+                                   onclick="FailSanctions()"></a>
+                                <input type="button" class="inputButton" value="Set as N/A" id="na"
+                                       onclick="NASanctions()" />
+                                <a id="viewdetailsLink" href="~/Allocation/Edit"
+                                   onclick="NASanctions()"></a>
+                                <input type="button" class="inputButton" value="Query Tester" id="querytester"
+                                       onclick="QueryTesterSanctions()" />
+                                <a id="viewdetailsLink" href="~/Allocation/Edit"
+                                   onclick="QueryTesterSanctions()"></a>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+</form>
+
+
+<div id="AllocationDetailsdialog"
+     style="overflow: hidden;"></div>
+
+
+
+<script type="text/javascript">
+    var AllocationUrl = '@Url.Action("GetSanctions", "Allocation")';
+    var UpdateSanctions = '@Url.Action("UpdateSanctions", "Allocation")';
+</script>
+
+
+<script src="~/Content/Scripts/Allocation/Sanctions.js"
+        type="text/javascript"></script>

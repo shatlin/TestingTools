@@ -1,0 +1,29 @@
+﻿@model Testing.Models.ReadyForReleaseList
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>ReadyForReleaseList</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ReadyForReleaseValue)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ReadyForReleaseValue)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ReadyForReleaseDescription)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ReadyForReleaseDescription)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

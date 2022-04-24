@@ -1,0 +1,206 @@
+﻿dhtml, body {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+.PageHeader
+{
+	height: 18px;
+	padding: 5px;
+	padding-left: 0px;
+	vertical-align: middle;
+	font-family: Tahoma;
+	font-weight: bold;
+	font-size: 18px;
+	color:#22513c;
+	margin-bottom: 20px;
+}
+*/
+
+
+
+.Button {
+    border: #22513c 1px solid;
+    height: 25px;
+    width: 100px;
+    background-color: #22513c;
+    vertical-align: middle;
+    font-family: Tahoma;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff !important;
+}
+
+.ActionLinkButton {
+    border: #22513c 1px solid;
+    height: 25px;
+    width: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: #22513c;
+    vertical-align: middle;
+    font-family: Tahoma;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff !important;
+    -moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari, Chrome */
+    -khtml-border-radius: 5px; /* KHTML */
+    border-radius: 5px; /* CSS3 */
+}
+
+.PageHeader {
+    font-family: Tahoma;
+    color: #22513c;
+    font-size: medium;
+    font-weight: bold;
+    padding: 3px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+/*
+.InputDivHeader
+{
+	border: 1px solid#22513c;
+	background-color: #22513c;
+	color: white;
+	height: 14px;
+	padding: 5px;
+	padding-left: 5px;
+	vertical-align: middle;
+	font-family: Tahoma;
+	font-weight: bold;
+	font-size: 12px;
+}
+*/
+.InputDivHeader {
+    border: #22513c 1px solid;
+    height: 20px;
+    background-color: #22513c;
+    padding-left: 4px;
+    padding-top: 5px;
+    vertical-align: middle;
+    font-family: Tahoma;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.ActionLinks {
+    border: #22513c 1px solid;
+    height: 20px;
+    background-color: #22513c;
+    padding: 6px;
+    vertical-align: middle;
+    font-family: Tahoma;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff !important;
+    text-align: left;
+}
+
+.TableLinks {
+    color: #22513c !important;
+    font-family: Tahoma;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: underline !important;
+    text-align: left;
+}
+
+.TableHeader {
+    border: #22513c 1px solid;
+    height: 20px;
+    background-color: #22513c;
+    padding-left: 4px;
+    padding-top: 5px;
+    vertical-align: middle;
+    font-family: Tahoma;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+}
+
+.TableRow {
+    height: 15px;
+    padding:3px;
+    text-align: left;
+    vertical-align: top;
+    font-family: Tahoma;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.TableRowColumnStyle {
+    vertical-align: top;
+    height: 15px;
+    text-align: left;
+    font-family: Tahoma;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.TableCellColumnStyle {
+    vertical-align: top;
+    height: 35px;
+    text-align: left;
+    padding-left: 5px !important;
+    font-family: Tahoma;
+    font-size: 12px;
+    font-weight: bold;
+   
+}
+
+
+.TopGridTableCell {
+    height: 18px;
+    vertical-align: top;
+    text-align: left;
+    padding-left: 5px !important;
+    padding-top: 5px;
+    font-family: Tahoma;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid grey;
+}
+
+.TableCell {
+    height: 15px;
+    vertical-align: top;
+    text-align: left;
+    padding-left: 5px !important;
+    font-family: Tahoma;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.InputDiv {
+    border: 1px solid #c2ccb8;
+    border-top: 0px;
+    padding: 5px;
+    font-family: Tahoma;
+    vertical-align: middle;
+}
+
+
+.SearchImage {
+    padding: 0px;
+    margin: 0px;
+    height: 25px;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.disabledControl {
+    background-color: #acacac;
+}
+
+
+.calendar {
+    height: 220px !important;
+    width: 270px !important;
+}

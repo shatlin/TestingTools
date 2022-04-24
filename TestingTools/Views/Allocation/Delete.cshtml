@@ -1,0 +1,264 @@
+﻿@model Testing.Models.Allocation
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Allocation</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CycleId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CycleId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ModuleId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ModuleId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SystemId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SystemId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SubSystem1Id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubSystem1Id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SubSystem2Id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubSystem2Id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ScenarioNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ScenarioNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ScenarioName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ScenarioName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ScenarioDescription)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ScenarioDescription)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PlannedDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PlannedDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ExecutedDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExecutedDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Comments)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Comments)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ReadyForReleaseId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ReadyForReleaseId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ReleasedByUserId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ReleasedByUserId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ReferenceNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ReferenceNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DebitOrPurchaseAccNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DebitOrPurchaseAccNo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DebitOrPurchaseCurrency)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DebitOrPurchaseCurrency)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DebitOrPurchaseAmt)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DebitOrPurchaseAmt)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CreditOrSellAccNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreditOrSellAccNo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CreditOrSellCurrency)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreditOrSellCurrency)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CreditOrSellAmount)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreditOrSellAmount)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WSSDealRefNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WSSDealRefNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ValueDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ValueDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Rates)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Rates)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ChargeAccNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ChargeAccNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ChargeAmount)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ChargeAmount)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BOPCAT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BOPCAT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DecisionMatrix)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DecisionMatrix)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SwiftAddress)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SwiftAddress)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BOPSplits)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BOPSplits)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SettlementSplits)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SettlementSplits)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CCNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CCNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Tax)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Tax)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BlockedReasonId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BlockedReasonId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BlockedReasonComments)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BlockedReasonComments)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

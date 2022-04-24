@@ -1,0 +1,64 @@
+﻿@model Testing.Models.DownStreamVerification
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>DownStreamVerification</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Allocation.ScenarioName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Allocation.ScenarioName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DownStream.DownStreamName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DownStream.DownStreamName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ResultList.ResultName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ResultList.ResultName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Comments)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Comments)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DueDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DueDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VerifiedDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VerifiedDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.User.UserId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.User.UserId)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

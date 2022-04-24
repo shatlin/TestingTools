@@ -1,0 +1,453 @@
+﻿@model Testing.Models.Allocation
+@{
+    ViewBag.Title = "Edit Scenario";
+}
+<div class="PageHeader" style="padding-top:10px;">
+    @*Edit @Html.DisplayFor(model => model.ScenarioName)*@
+</div>
+<table style="width:100%;border:1px solid grey;" cellpadding="0" cellspacing="0">
+    <tr>
+        <th class="TableHeader" width="10%">
+            @Html.DisplayNameFor(model => model.CycleId)
+        </th>
+        <th class="TableHeader" width="10%">
+            @Html.DisplayNameFor(model => model.TestCas.ScenarioDescription)
+        </th>
+        <th class="TableHeader" width="10%">
+            @Html.DisplayNameFor(model => model.TestCas.ModuleId)
+        </th>
+        <th class="TableHeader" width="10%">
+            @Html.DisplayNameFor(model => model.TestCas.SystemId)
+
+        </th>
+        <th class="TableHeader" width="10%">
+            @Html.DisplayNameFor(model => model.ExecutedUser.UserName)
+        </th>
+        <th class="TableHeader" width="10%">
+            @Html.DisplayNameFor(model => model.PlannedDate)
+        </th>
+        <th class="TableHeader" width="40%">
+            @Html.DisplayNameFor(model => model.Comments)
+        </th>
+    </tr>
+
+    <tr class="TableRow">
+        <td class="TopGridTableCell" width="10%">
+            @Html.DisplayFor(model => model.Cycle.CycleName)
+        </td>
+        <td class="TopGridTableCell" width="30%">
+            @Html.DisplayFor(model => model.TestCas.ScenarioDescription)
+        </td>
+        <td class="TopGridTableCell" width="10%">
+            @Html.DisplayFor(model => model.TestCas.Module.SystemName)
+        </td>
+        <td class="TopGridTableCell" width="10%">
+            @Html.DisplayFor(model => model.TestCas.System.SystemName)
+        </td>
+        <td class="TopGridTableCell" width="5%">
+            @Html.DisplayFor(model => model.ExecutedUser.UserName)
+        </td>
+
+        <td class="TopGridTableCell" width="5%">
+            @Html.DisplayFor(model => model.PlannedDate)
+        </td>
+
+        <td class="TopGridTableCell" width="30%">
+            @Html.DisplayFor(model => model.Comments)
+        </td>
+    </tr>
+</table>
+<br />
+
+@using (Ajax.BeginForm("Edit", "Allocation", new AjaxOptions { UpdateTargetId = "Hi" }))
+{
+    string emplId = "CC611792";
+    <input value=@emplId name="empId" type="hidden">
+
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.Id)
+    @Html.HiddenFor(model => model.CycleId)
+    @Html.HiddenFor(model => model.UserId)
+    @Html.HiddenFor(model => model.TestCaseId)
+    @Html.HiddenFor(model => model.StartTime)
+    //ViewBag.EmpId=empId;
+    @*@Html.HiddenFor(model => model.ModuleId)
+        @Html.HiddenFor(model => model.ScenarioNumber)
+        @Html.HiddenFor(model => model.ScenarioName)
+        @Html.HiddenFor(model => model.SystemId)
+        @Html.HiddenFor(model => model.PlannedDate)
+        @Html.HiddenFor(model => model.ScenarioDescription)*@
+
+    <table style="width:100%;border:1px solid grey;" cellpadding="0" cellspacing="0">
+        <tr>
+            <th class="TableHeader" colspan="6">
+                Update Scenario Details
+            </th>
+        </tr>
+        <tr>
+            <td colspan="6">&nbsp;</td>
+        </tr>
+        <tr class="TableRowColumnStyle">
+            <td class="TableCellColumnStyle">@Html.LabelFor(model => model.ReferenceNumber)</td>
+            <td class="TableCellColumnStyle">
+                @Html.EditorFor(model => model.ReferenceNumber)
+                @Html.ValidationMessageFor(model => model.ReferenceNumber)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.LabelFor(model => model.ReadyForReleaseId)
+            </td>
+            <td class="TableCellColumnStyle">
+
+
+
+                @Html.DropDownList("ReadyForReleaseId", string.Empty)
+                @Html.ValidationMessageFor(model => model.ReadyForReleaseId)
+
+
+
+
+            </td>
+
+            <td class="TableCellColumnStyle">
+                @Html.LabelFor(model => model.ReleasedByUserId)
+            </td>
+
+            <td class="TableCellColumnStyle">
+
+                @Html.DropDownList("ReleasedByUserId", string.Empty)
+                @Html.ValidationMessageFor(model => model.ReleasedByUserId)
+            </td>
+
+
+        </tr>
+
+        <tr class="TableRowColumnStyle">
+
+
+
+
+            <td class="TableCellColumnStyle">
+                @Html.LabelFor(model => model.RequestToReleaseUserId)<br /><br /><br />
+                @Html.LabelFor(model => model.BlockedReasonId)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.DropDownList("RequestToReleaseUserId", string.Empty)
+
+                @Html.ValidationMessageFor(model => model.RequestToReleaseUserId)
+
+                <br /><br /><br />
+                @Html.DropDownList("BlockedReasonId", string.Empty)
+
+                @Html.ValidationMessageFor(model => model.BlockedReasonId)
+            </td>
+
+            <td class="TableCellColumnStyle">
+                @Html.LabelFor(model => model.BlockedReasonComments)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.TextAreaFor(model => model.BlockedReasonComments, new { @class = "inputTextArea" })
+
+                @Html.ValidationMessageFor(model => model.BlockedReasonComments)
+            </td>
+
+            <td class="TableCellColumnStyle">
+
+                @Html.LabelFor(model => model.Comments)
+            </td>
+
+            <td class="TableCellColumnStyle">
+                @Html.TextAreaFor(model => model.Comments, new { @class = "inputTextArea" })
+                @Html.ValidationMessageFor(model => model.Comments)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">&nbsp;</td>
+        </tr>
+        <tr class="TableRowColumnStyle">
+
+            <td class="TableCellColumnStyle">@Html.LabelFor(model => model.DebitOrPurchaseAccNo)</td>
+
+            <td class="TableCellColumnStyle">
+                @Html.EditorFor(model => model.DebitOrPurchaseAccNo)
+                @Html.ValidationMessageFor(model => model.DebitOrPurchaseAccNo)
+            </td>
+
+            <td class="TableCellColumnStyle">@Html.LabelFor(model => model.DebitOrPurchaseCurrency)</td>
+
+            <td class="TableCellColumnStyle">
+                @Html.EditorFor(model => model.DebitOrPurchaseCurrency)
+                @Html.ValidationMessageFor(model => model.DebitOrPurchaseCurrency)
+            </td>
+
+            <td class="TableCellColumnStyle">
+                @Html.LabelFor(model => model.DebitOrPurchaseAmt)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.EditorFor(model => model.DebitOrPurchaseAmt)
+                @Html.ValidationMessageFor(model => model.DebitOrPurchaseAmt)
+            </td>
+
+        </tr>
+
+        <tr class="TableRowColumnStyle">
+
+
+            <td class="TableCellColumnStyle">
+                @Html.LabelFor(model => model.CreditOrSellAccNo)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.EditorFor(model => model.CreditOrSellAccNo)
+                @Html.ValidationMessageFor(model => model.CreditOrSellAccNo)
+            </td>
+
+            <td class="TableCellColumnStyle">
+                @Html.LabelFor(model => model.CreditOrSellCurrency)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.EditorFor(model => model.CreditOrSellCurrency)
+                @Html.ValidationMessageFor(model => model.CreditOrSellCurrency)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.LabelFor(model => model.CreditOrSellAmount)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.EditorFor(model => model.CreditOrSellAmount)
+                @Html.ValidationMessageFor(model => model.CreditOrSellAmount)
+            </td>
+        </tr>
+        <tr class="TableRowColumnStyle">
+
+
+
+
+            <td class="TableCellColumnStyle">
+                @Html.LabelFor(model => model.ValueDate)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.EditorFor(model => model.ValueDate)
+                <img src="../../Content/images/date.png" id="ValueDateIcon" alt="Date" class="VerticalAlignMiddle" />
+                @Html.ValidationMessageFor(model => model.ValueDate)
+            </td>
+
+            <td class="TableCellColumnStyle">
+                @Html.LabelFor(model => model.WSSDealRefNumber)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.EditorFor(model => model.WSSDealRefNumber)
+                @Html.ValidationMessageFor(model => model.WSSDealRefNumber)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.LabelFor(model => model.Rates)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.EditorFor(model => model.Rates)
+                @Html.ValidationMessageFor(model => model.Rates)
+            </td>
+
+        </tr>
+
+        <tr class="TableRowColumnStyle">
+
+            <td class="TableCellColumnStyle">
+                @Html.LabelFor(model => model.ChargeAccNumber)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.EditorFor(model => model.ChargeAccNumber)
+                @Html.ValidationMessageFor(model => model.ChargeAccNumber)
+            </td>
+
+            <td class="TableCellColumnStyle">
+                @Html.LabelFor(model => model.ChargeAmount)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.EditorFor(model => model.ChargeAmount)
+                @Html.ValidationMessageFor(model => model.ChargeAmount)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.LabelFor(model => model.BOPCAT)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.EditorFor(model => model.BOPCAT)
+                @Html.ValidationMessageFor(model => model.BOPCAT)
+            </td>
+
+        </tr>
+
+        <tr class="TableRowColumnStyle">
+
+            <td class="TableCellColumnStyle">
+                @Html.LabelFor(model => model.DecisionMatrix)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.EditorFor(model => model.DecisionMatrix)
+                @Html.ValidationMessageFor(model => model.DecisionMatrix)
+            </td>
+
+            <td class="TableCellColumnStyle">
+                @Html.LabelFor(model => model.SwiftAddress)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.EditorFor(model => model.SwiftAddress)
+                @Html.ValidationMessageFor(model => model.SwiftAddress)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.LabelFor(model => model.BOPSplits)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.EditorFor(model => model.BOPSplits)
+                @Html.ValidationMessageFor(model => model.BOPSplits)
+            </td>
+
+        </tr>
+
+        <tr class="TableRowColumnStyle">
+
+            <td class="TableCellColumnStyle">
+                @Html.LabelFor(model => model.SettlementSplits)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.EditorFor(model => model.SettlementSplits)
+                @Html.ValidationMessageFor(model => model.SettlementSplits)
+            </td>
+
+            <td class="TableCellColumnStyle">
+                @Html.LabelFor(model => model.CCNumber)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.EditorFor(model => model.CCNumber)
+                @Html.ValidationMessageFor(model => model.CCNumber)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.LabelFor(model => model.Tax)
+            </td>
+            <td class="TableCellColumnStyle">
+                @Html.EditorFor(model => model.Tax)
+                @Html.ValidationMessageFor(model => model.Tax)
+            </td>
+
+        </tr>
+
+        @*<tr class="TableRowColumnStyle">
+
+                <td class="TableCellColumnStyle">
+                    @Html.LabelFor(model => model.ChargeAccNumber1)
+                </td>
+                <td class="TableCellColumnStyle">
+                    @Html.EditorFor(model => model.ChargeAccNumber1)
+                    @Html.ValidationMessageFor(model => model.ChargeAccNumber1)
+                </td>
+
+                <td class="TableCellColumnStyle">
+                    @Html.LabelFor(model => model.ChargeAccNumber2)
+                </td>
+                <td class="TableCellColumnStyle">
+                    @Html.EditorFor(model => model.ChargeAccNumber2)
+                    @Html.ValidationMessageFor(model => model.ChargeAccNumber2)
+                </td>
+                <td class="TableCellColumnStyle">
+                    @Html.LabelFor(model => model.ChargeAccNumber3)
+                </td>
+                <td class="TableCellColumnStyle">
+                    @Html.EditorFor(model => model.ChargeAccNumber3)
+                    @Html.ValidationMessageFor(model => model.ChargeAccNumber3)
+                </td>
+
+            </tr>
+
+            <tr class="TableRowColumnStyle">
+
+                <td class="TableCellColumnStyle">
+                    @Html.LabelFor(model => model.ChargeAmount1)
+                </td>
+                <td class="TableCellColumnStyle">
+                    @Html.EditorFor(model => model.ChargeAmount1)
+                    @Html.ValidationMessageFor(model => model.ChargeAmount1)
+                </td>
+
+                <td class="TableCellColumnStyle">
+                    @Html.LabelFor(model => model.ChargeAmount2)
+                </td>
+                <td class="TableCellColumnStyle">
+                    @Html.EditorFor(model => model.ChargeAmount2)
+                    @Html.ValidationMessageFor(model => model.ChargeAmount2)
+                </td>
+                <td class="TableCellColumnStyle">
+                    @Html.LabelFor(model => model.ChargeAmount3)
+                </td>
+                <td class="TableCellColumnStyle">
+                    @Html.EditorFor(model => model.ChargeAmount3)
+                    @Html.ValidationMessageFor(model => model.ChargeAmount3)
+                </td>
+
+            </tr>*@
+
+
+
+        <tr>
+            <td colspan="6">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="text-align:left;padding-left:5px;">
+
+                <input id="Ajaxer" name="Ajaxer" type="submit" value="Save" class="ActionLinkButton" />
+
+            </td>
+            <td colspan="4"></td>
+        </tr>
+
+
+    </table>
+
+}
+
+<div id="hi"></div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<script>
+
+
+    $(function () {
+
+
+        $("#ValueDateIcon").click(function () {
+
+            try {
+                $("#ValueDate").datepicker({
+                    changeMonth: true,
+                    changeYear: true
+                }).datepicker("show");
+            } catch (err) {
+                alert(err);
+            }
+
+
+        });
+
+        try {
+            $("#ValueDate").datepicker({
+                changeMonth: true,
+                changeYear: true
+            }).datepicker();
+        } catch (err) {
+            alert(err);
+        }
+
+        $("#Ajaxer").click(function () {
+            ShowProgressBarWithMsg("Saving");
+
+            showMessage("Saved Successfully", "success");
+            sleep(2000);
+            RemoveProgressBar();
+        });
+
+
+
+
+    });
+
+
+</script>
